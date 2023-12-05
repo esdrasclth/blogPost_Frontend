@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog ESDRASDEV - Un blog sin límites, un mundo de historias.</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+
+  <!-- Menu de navegacion -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img src="./assets/img/logo.png" width="112" height="28" />
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="./index.html"> Inicio </a>
+        <a class="navbar-item" href="./pages/about.html"> Acerda de </a>
+        <a class="navbar-item" href="./pages/contact.html"> Contacto </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"> Mas </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="./pages/gallery.html"> Galeria </a>
+            <a class="navbar-item" href="./pages/resources.html"> Recursos </a>
+            <a class="navbar-item" href="./pages/subscription.html"> Suscripción </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="./login.html" class="button is-primary">
+              <strong>Iniciar Sesion</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado/Banner principal -->
+  <section id="banner" class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          ¡Bienvenido a mi Blog Personal!
+        </h1>
+        <h2 class="subtitle">
+          Un blog sin límites, un mundo de historias.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor/Seccion del blog -->
+  <div class="container">
+    <h1 class="title pt-5">Listado de Posts</h1>
+    <div class="columns is-multiline" id="postContainer">
+      <!-- Aquí se mostrarán los posts -->
+    </div>
+
+    <nav class="pagination my-4" role="navigation" aria-label="pagination">
+      <a class="pagination-previous" id="previousPage" title="This is the first page">Anterior</a>
+      <a class="pagination-next" id="nextPage">Siguiente</a>
+      <ul class="pagination-list">
+        <li>
+          <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+        </li>
+        <li>
+          <a class="pagination-link" aria-label="Goto page 2">2</a>
+        </li>
+        <li>
+          <a class="pagination-link" aria-label="Goto page 3">3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!--Footer o pie de pagina-->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>ESDRASDEV</strong> desarrollado por
+        <a href="https://www.instagram.com/esdrasclth/">Esdras Clother</a>. Alumno de la
+        <a href="https://www.uth.hn/">UTH</a>. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

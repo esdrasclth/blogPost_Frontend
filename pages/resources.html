@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recursos - Formulario de carga de archivos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+
+  <!-- Menu de navegacion -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../index.html">
+        <img src="../assets/img/logo.png" width="112" height="28" />
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="../index.html"> Inicio </a>
+        <a class="navbar-item" href="../pages/about.html"> Acerda de </a>
+        <a class="navbar-item" href="../pages/contact.html"> Contacto </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"> Mas </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="./gallery.html"> Galeria </a>
+            <a class="navbar-item" href="./resources.html"> Recursos </a>
+            <a class="navbar-item" href="./subscription.html"> Suscripción </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="../login.html" class="button is-primary">
+              <strong>Iniciar Sesion</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--Formulario de carga de archivos-->
+  <section class="section my-auto">
+    <div class="container">
+      <form id="uploadForm" enctype="multipart/form-data">
+        <div class="field">
+          <h1 class="title pt-5">Selecciona un archivo</h1>
+          <div class="control">
+            <input class="input" type="file" name="file" />
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary" type="button" onclick="uploadFile()">
+              Subir Archivo
+            </button>
+          </div>
+        </div>
+
+        <!-- Nuevo elemento para mostrar el mensaje de error -->
+        <div class="notification is-danger mt-4" id="errorNotification" style="display: none;">
+          Campos en blanco, Por favor, seleccione un archivo para continuar.
+        </div>
+      </form>
+
+      <div id="successModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <p>¡El archivo se subió correctamente!</p>
+          </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" onclick="closeModal()"></button>
+      </div>
+    </div>
+  </section>
+
+  <!--Footer o pie de pagina-->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>ESDRASDEV</strong> desarrollado por
+        <a href="https://www.instagram.com/esdrasclth/">Esdras Clother</a>.
+        Alumno de la <a href="https://www.uth.hn/">UTH</a>. Todos los derechos
+        reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/uploadFile.js"></script>
+</body>
+
+</html>

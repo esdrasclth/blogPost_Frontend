@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesion - ESDRASDEV</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+  <!-- Menu de navegacion -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img src="./assets/img/logo.png" width="112" height="28" />
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="./index.html"> Inicio </a>
+        <a class="navbar-item" href="./pages/about.html"> Acerda de </a>
+        <a class="navbar-item" href="./pages/contact.html"> Contacto </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"> Mas </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="./pages/gallery.html"> Galeria </a>
+            <a class="navbar-item" href="./pages/resources.html"> Recursos </a>
+            <a class="navbar-item" href="./pages/subscription.html"> Suscripción </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="./login.html" class="button is-primary">
+              <strong>Iniciar Sesion</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section my-auto">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="box" id="loginForm">
+            <h2 class="title">Login</h2>
+            <form>
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input class="input" type="email" id="email" name="email" placeholder="Email" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                  <input class="input" type="password" id="password" name="password" placeholder="Password" />
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-primary">Login</button>
+                </div>
+              </div>
+            </form>
+            <!-- Nuevo elemento para mostrar el mensaje de error -->
+            <div class="notification is-danger mt-4" id="errorNotification" style="display: none;">
+              Usuario o contraseña incorrectos. Por favor, intenta de nuevo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Footer o pie de pagina-->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>ESDRASDEV</strong> desarrollado por
+        <a href="https://www.instagram.com/esdrasclth/">Esdras Clother</a>. Alumno de la
+        <a href="https://www.uth.hn/">UTH</a>. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="./js/login.js"></script>
+
+</body>
+
+</html>

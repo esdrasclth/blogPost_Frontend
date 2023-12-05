@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel de Administración - ESDRASDEV</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+
+  <!-- Menu de navegacion -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img src="./assets/img/logo.png" width="112" height="28" />
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="./index.html"> Inicio </a>
+        <a class="navbar-item" href="./pages/about.html"> Acerda de </a>
+        <a class="navbar-item" href="./pages/contact.html"> Contacto </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"> Mas </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="./pages/gallery.html"> Galeria </a>
+            <a class="navbar-item" href="./pages/resources.html"> Recursos </a>
+            <a class="navbar-item" href="./pages/subscription.html"> Suscripción </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="./login.html" class="button is-primary signoff">
+              <strong>Cerrar Sesion</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav <div class="columns is-gapless">
+
+  <!-- Menú lateral -->
+  <div class="column is-narrow sidebar">
+    <aside class="menu mt-6">
+      <ul class="menu-list">
+        <li>
+          <a href="#" class="" onclick="showContent('nuevo-post')">Nuevo Post</a>
+        </li>
+        <li>
+          <a href="#" onclick="showContent('administrar-post')">Administrar Post</a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  </div>
+  
+  <!-- Contenido principal -->
+  <div class="column is-10 main-content" id="content">
+    <div class="pl-10" id="nuevo-post">
+      <form id="postForm" method="POST">
+        <div class="field">
+          <h1 class="title">Publicar un nuevo post</h1>
+          <input type="hidden" id="postId" name="postId" value="" />
+
+          <label class="label">Título</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Título del post" name="titulo" required />
+          </div>
+        </div>
+
+        <div class="field">
+        </div>
+
+        <div class="field">
+          <label class="label">Autor</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Nombre del autor" name="autor" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Contenido</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Contenido del post" name="contenido" required></textarea>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" type="submit">Publicar</button>
+          </div>
+          <div class="control">
+            <button class="button is-light" type="reset">Limpiar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="administrar-post" style="display: none">
+      <h1 class="title">Administrar contenido</h1>
+
+      <div class="columns">
+        <div class="column is-full" id="postContainer2">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--Footer o pie de pagina-->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>ESDRASDEV</strong> desarrollado por
+        <a href="https://www.instagram.com/esdrasclth/">Esdras Clother</a>. Alumno de la
+        <a href="https://www.uth.hn/">UTH</a>. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="./js/admin.js"></script>
+
+</body>
+
+</html>
